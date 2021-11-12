@@ -1,7 +1,9 @@
 {
-  "name": "clio",
+  "name": "writers-clock",
   "version": "0.1.0",
+  "author": "the-rev-dev",
   "private": true,
+  "description": "Track number of words written daily for a given project",
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
@@ -13,7 +15,6 @@
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.24",
     "@types/node": "^12.20.25",
-    "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
     "history": "^5.1.0",
     "react": "^17.0.2",
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.34"
   }
 }
