@@ -17,7 +17,7 @@ export const AppHeader: React.FC<AppHeaderProps> = (props) => {
                 <Typography
                     variant="h5"
                     style={{padding: theme.spacing(2), color: theme.palette.primary.main}}
-                    children="True Love"
+                    children="Writers Clock"
                 />
 
 

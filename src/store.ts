@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { gameReducer } from './reducers/gameReducer'
+import { ProjectSlice } from './slices/projectSlice'
+
 
 export const store = configureStore({
   reducer: {
-      gameReducer,
+    [ProjectSlice.name]: ProjectSlice.reducer
   },
 })
 

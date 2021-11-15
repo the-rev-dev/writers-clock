@@ -1,10 +1,10 @@
 import { useTheme } from "@mui/material"
 import Grid from "@mui/material/Grid/Grid"
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import AddIcon from '@mui/icons-material/Add';
 import { useLinkClickHandler } from "react-router-dom";
 import { StyledButton } from "../Styled/StyledButton";
 import { useDispatch } from "react-redux";
-import { newGame } from "../../actions/gameActions";
+import { ProjectList } from "./ProjectList";
 
 interface HomePageProps {
 }
@@ -12,12 +12,11 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = (props) => {
     const dispatch = useDispatch();
 
-    const linkHandler = useLinkClickHandler("/game");
+    const linkHandler = useLinkClickHandler("/new-project");
     const theme = useTheme();
 
-    const handleNewGameClick = (evt: any) => {
+    const handleNewProjectClick = (evt: any) => {
         linkHandler(evt);
-        dispatch(newGame())
     }
 
     return <Grid
@@ -27,18 +26,19 @@ export const HomePage: React.FC<HomePageProps> = (props) => {
         justifyContent='center'
     >
 
-            <Grid item xs={6}>
-                <StyledButton
-                    startIcon={<SportsEsportsIcon />}
-                    children="New Game"
-                    style={{
-                        paddingTop: theme.spacing(1),
-                        paddingBottom: theme.spacing(1)
-                    }}
-                    onClick={handleNewGameClick}
-                    fullWidth
-                />
-            </Grid>
-            
+        <Grid item xs={6}>
+            <StyledButton
+                startIcon={<AddIcon />}
+                children="New Project"
+                style={{
+                    paddingTop: theme.spacing(1),
+                    paddingBottom: theme.spacing(1)
+                }}
+                onClick={handleNewProjectClick}
+                fullWidth
+            />
+            <ProjectList />
+        </Grid>
+
     </Grid>
 }
